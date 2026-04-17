@@ -1,8 +1,8 @@
 class User < ApplicationRecord
-  validate :name, presence: true
-  validate :dob, presence: true
-  validate :phone, presence: true
-  validate :email, presence: true,
+  validates :name, presence: true
+  validates :dob, presence: true
+  validates :phone, presence: true
+  validates :email, presence: true,
             format: { with: URI::MailTo::EMAIL_REGEXP,
             message: "must be a valid email address" }
 end
