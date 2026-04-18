@@ -10,11 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_04_18_115210) do
+ActiveRecord::Schema[8.1].define(version: 2026_04_18_115307) do
   create_table "editors", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.string "email"
     t.string "name"
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "post_editors", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.integer "editor_id"
+    t.integer "post_id"
     t.datetime "updated_at", null: false
   end
 
